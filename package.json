@@ -1,6 +1,6 @@
 {
   "name": "adapt-contrib-gmcq",
-  "version": "6.0.3",
+  "version": "6.0.5",
   "framework": ">=5.14.0",
   "homepage": "https://github.com/deltanet/adapt-contrib-gmcq",
   "bugs": "https://github.com/deltanet/adapt-contrib-gmcq/issues",
