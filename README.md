@@ -1,12 +1,12 @@
 # adapt-contrib-gmcq  
 
-**Graphical Multiple Choice Question (GMCQ)** is a *question component* bundled with the [Adapt framework](https://github.com/adaptlearning/adapt_framework). 
+**Graphical Multiple Choice Question (GMCQ)** is a *question component* bundled with the [Adapt framework](https://github.com/adaptlearning/adapt_framework).
 
 <img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/gmcq01.gif" alt="graphical multiple choice question in action" >  
 
 It presents possible answers in the form of graphics or images. **GMCQ** is a variation on [**MCQ**](https://github.com/adaptlearning/mcq/wiki). It can be configured with a single correct answer or multiple correct answers. Upon submission, feedback is provided via the [**Tutor** extension](https://github.com/adaptlearning/adapt-contrib-tutor), if installed. Feedback can be provided for correct, incorrect and partially correct answers. The number of attempts allowed may be configured.
 
-[Visit the **GMCQ** wiki](https://github.com/adaptlearning/adapt-contrib-gmcq/wiki) for more information about its functionality and for explanations of key properties. 
+[Visit the **GMCQ** wiki](https://github.com/adaptlearning/adapt-contrib-gmcq/wiki) for more information about its functionality and for explanations of key properties.
 
 ## Installation
 
@@ -26,14 +26,14 @@ With the [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run 
 
 ## Settings Overview
 
-The attributes listed below are used in *components.json* to configure **GMCQ**, and are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-gmcq/blob/master/example.json). Visit the [**GMCQ** wiki](gmcq/wiki) for more information about how they appear in the [authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki). 
+The attributes listed below are used in *components.json* to configure **GMCQ**, and are properly formatted as JSON in [*example.json*](https://github.com/adaptlearning/adapt-contrib-gmcq/blob/master/example.json). Visit the [**GMCQ** wiki](gmcq/wiki) for more information about how they appear in the [authoring tool](https://github.com/adaptlearning/adapt_authoring/wiki).
 
 <div float align=right><a href="#top">Back to Top</a></div>
 
 ### Attributes
 
 In addition to the attributes specifically listed below, [*question components*](https://github.com/adaptlearning/adapt_framework/wiki/Core-Plug-ins-in-the-Adapt-Learning-Framework#question-components) can implement the following sets of attributes:   
-+ [**core model attributes**](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes): These are inherited by every Adapt component. They have no default values. Like the attributes below, their values are assigned in *components.json*. 
++ [**core model attributes**](https://github.com/adaptlearning/adapt_framework/wiki/Core-model-attributes): These are inherited by every Adapt component. They have no default values. Like the attributes below, their values are assigned in *components.json*.
 + [**core buttons**](https://github.com/adaptlearning/adapt_framework/wiki/Core-Buttons): Default values are found in *course.json*, but may be overridden by **GMCQ's** model in *components.json*.
 
 **\_component** (string): This value must be: `gmcq`.
@@ -71,13 +71,13 @@ guide the learner’s interaction with the component.
 
 >**text** (string): Optional text that is displayed as part of the multiple choice option.  
 
->**\_shouldBeSelected** (boolean): Value can be `true` or `false`. Use `true` for items that must be selected for a correct answer. The value of **\_selectable** must correspond to the number of **\_items** where **\_shouldBeSelected** is set to `true`. 
+>**\_shouldBeSelected** (boolean): Value can be `true` or `false`. Use `true` for items that must be selected for a correct answer. The value of **\_selectable** must correspond to the number of **\_items** where **\_shouldBeSelected** is set to `true`.
 
 >**\_isPartlyCorrect** (boolean): Determines whether the *item* when selected marks the question as partly correct. Value can be `true` or `false`. Default is `false`.  
 
->**feedback** (string): This attribute is used only when the value for **\_selectable** is set to `1` (i.e., radio button style questions). This text will be shown if the learner selects this item, and it is an incorrect answer. 
+>**feedback** (string): This attribute is used only when the value for **\_selectable** is set to `1` (i.e., radio button style questions). This text will be shown if the learner selects this item, and it is an incorrect answer.
 
->**\_graphic** (object): The image that appears as a possible answer. It contains values for **large**, **small**, **alt**, and **title**. 
+>**\_graphic** (object): The image that appears as a possible answer. It contains values for **large**, **small**, **alt**, and **title**.
 
 >>**large** (string): File name (including path) of the image used with large device width. Path should be relative to the *src* folder (e.g., *course/en/images/origami-menu-two.jpg*).  
 
@@ -96,11 +96,11 @@ contains values for three types of answers: **correct**, **\_incorrect**, and **
 
 >**correct** (string): Text that will be displayed when the submitted answer is correct.  
 
->**\_incorrect** (object): Texts that will be displayed when the submitted answer is incorrect. It contains values that are displayed under differing conditions: **final** and **notFinal**. 
+>**\_incorrect** (object): Texts that will be displayed when the submitted answer is incorrect. It contains values that are displayed under differing conditions: **final** and **notFinal**.
 
->>**final** (string): Text that will be displayed when the submitted answer is incorrect and no more attempts are permitted. 
+>>**final** (string): Text that will be displayed when the submitted answer is incorrect and no more attempts are permitted.
 
->>**notFinal** (string): Text that will be displayed when the submitted answer is incorrect while more attempts are permitted. This is optional&mdash;if you do not supply it, the **\_incorrect.final** feedback will be shown instead. 
+>>**notFinal** (string): Text that will be displayed when the submitted answer is incorrect while more attempts are permitted. This is optional&mdash;if you do not supply it, the **\_incorrect.final** feedback will be shown instead.
 
 >**\_partlyCorrect** (object): Texts that will be displayed when the submitted answer is partially correct. It contains values that are displayed under differing conditions: **final** and **notFinal**.  
 
@@ -124,7 +124,7 @@ These ARIA labels are not visible elements; they are used by assistive technolog
 No known limitations.
 
 ----------------------------
-**Version number:**  6.0.2   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
+**Version number:**  6.0.3   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
 **Framework versions:** 5.14.0+  
 **Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-gmcq/graphs/contributors)  
 **Accessibility support:** WAI AA  
